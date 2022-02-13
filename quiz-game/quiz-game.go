@@ -1,21 +1,11 @@
 package main
 
-import ("encoding/csv";"fmt"; "os"; "strconv"; "strings")
-
-func add(x int, y int) int {
-	return x + y
-}
-
-func strToI(str string) int {
-  val, err := strconv.Atoi(str)
-  if err != nil { fmt.Println(err) }
-
-  return val
-}
-
-func toPercentage(num int, den int) float64 {
-  return (float64(num) / float64(den)) * 100
-}
+import ("encoding/csv"
+        "fmt"
+        "os"
+        // "strconv"
+        "strings"
+)
 
 func main() {
   // args := os.Args[1:]
@@ -37,9 +27,25 @@ func main() {
     var input string
 
     fmt.Scanln(&input)
+
     if input == v[1] { score++ }
   }
 
   fmt.Printf("Your Score: %.2f", toPercentage(score, len(data)))
 
 }
+
+func toPercentage(num int, den int) float64 {
+  return (float64(num) / float64(den)) * 100
+}
+
+// func add(x int, y int) int {
+// 	return x + y
+// }
+
+// func strToI(str string) int {
+//   val, err := strconv.Atoi(str)
+//   if err != nil { fmt.Println(err) }
+//
+//   return val
+// }
