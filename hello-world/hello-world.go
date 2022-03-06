@@ -1,7 +1,8 @@
-package main
+package helloworld
 
 import "fmt"
 
-func main() {
+func HelloWorld() string {
   fmt.Println("fuck")
+  return "fuck"
 }
